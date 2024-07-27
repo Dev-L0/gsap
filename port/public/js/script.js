@@ -1,4 +1,4 @@
-import {gsap}  from 'gsap';
+import {gsap} from 'gsap';
 //import gsap from "https://cdn.skypack.dev/gsap";
 const skills = document.querySelectorAll(".skills");
 const tools = document.querySelectorAll(".tools");
@@ -12,38 +12,38 @@ const Heroimg = document.getElementsByClassName(".heroimg");
 
 gsap.to(".heroimg", { rotation: 360, x: 100,z:900, duration: 1});
 
-//animations
-//  gsap.registerPlugin(MotionPathPlugin, SplitText);
+// //animations
+// //  gsap.registerPlugin(MotionPathPlugin, SplitText);
 
-ScrollSmoother.create({
-  wrapper:".main-content",
-  content:".smooth-content",
-  smooth:1,
-  smoothTouch: 0.18
-});
+// ScrollSmoother.create({
+//   wrapper:".main-content",
+//   content:".smooth-content",
+//   smooth:1,
+//   smoothTouch: 0.18
+// });
 
-let splittext = new SplitText(".skill-para", {type:"lines, words, chars"});
-gsap.from(splittext.words, {
-  duration: 0.7, 
-  autoAlpha: 0, 
-  stagger: 0.05,
-  ease: "power3.inOut",
-});
+// let splittext = new SplitText(".skill-para", {type:"lines, words, chars"});
+// gsap.from(splittext.words, {
+//   duration: 0.7, 
+//   autoAlpha: 0, 
+//   stagger: 0.05,
+//   ease: "power3.inOut",
+// });
 
-// gsap.to(".plane",{
-//   motionPath:{
-//     path:'.path',
-//     align:'.path',
-//     autoRotate: 90,
-//     alignOrigin: [0.5,0.5],
-//     start: 0,
-//     end:1
-//   },
-//   duration:6,
-//   repeat:0,
-//   immediateRender: true,
-//   ease:"pow4.easeOut"
-// })
+// // gsap.to(".plane",{
+// //   motionPath:{
+// //     path:'.path',
+// //     align:'.path',
+// //     autoRotate: 90,
+// //     alignOrigin: [0.5,0.5],
+// //     start: 0,
+// //     end:1
+// //   },
+// //   duration:6,
+// //   repeat:0,
+// //   immediateRender: true,
+// //   ease:"pow4.easeOut"
+// // })
 
 
 // Tooltip
