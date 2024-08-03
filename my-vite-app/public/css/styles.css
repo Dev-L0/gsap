@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gemunu Libre";
+  font-size: 18px;
+  letter-spacing: 1px;
+  scroll-behavior: smooth;
+}
+
+
+body, html{
+  overflow-x: hidden;
+}
+
+:root {
+  --background-color--background-primary: var(--base-color-neutral--black);
+  --base-color-brand--text_heading: rgba(255, 255, 255, .9);
+  --base-color-brand--text-p: rgba(255, 255, 255, .7);
+  --base-color-brand--light-purple: #b7a0e9;
+  --base-color-brand--gray-text-white-bg: #6b7280;
+  --background-color--background-alternate: rgba(255, 255, 255, 0);
+  
+
+}
+
+.dark{
+  background: radial-gradient(
+    farthest-corner at 40px 40px,
+    rgb(17, 6, 41) 0%,
+    rgb(0, 0, 0) 100%
+  );
+  color: var(--base-color-brand--text-p);
+}
+
+.light{
+  background: radial-gradient(
+    farthest-corner at 40px 40px,
+     rgb(184, 181, 189) 0%,
+      rgb(132, 92, 224) 100%
+  );
+  color:rgb(59, 6, 59);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(211, 202, 202);
+}
+
+.btn{
+  color: var(--base-color-brand--text_heading);
+  background-color: rgba(25, 17, 51, .5);
+  border: 1px solid rgba(248, 246, 254, .2);
+}
+
+
+
+.navbar {
+  border-bottom: 1px none var(--border-color--border-primary);
+  background-color: rgba(25, 15, 48, 0.5);
+  font-size: 18px;
+  height: 60px;
+  position: fixed;
+  max-width: inherit;
+  width: 100%;
+  top: 0%;
+  z-index: 100;
+}
+
+.navbar-nav{
+  gap:50px;
+}
+.navbar-nav>.nav-item>.nav-link {
+  font-family: "Gemunu Libre", sans-serif;
+  letter-spacing: 3px;
+  color: rgb(211, 202, 202);
+}
+
+
+.logo {
+  font-size: 35px;
+  font-family: "Miltonian Tattoo", serif; 
+  color:#a09f9c;
+}
+
+
+.sun, .moon{
+  font-size:16px;
+  color: yellow;
+}
+
+.theme{
+  padding:5px;
+}
+.theme-toggle-inp{
+  width:0;
+  height:0;
+  visibility:hidden; 
+}
+
+.theme-toggle{
+  width:50px;
+  height:20px;
+  position:relative;
+  display:flex;
+  justify-content: space-between;
+  background-color: rgb(3, 3, 3);
+  border-radius: 200px;
+  /* box-shadow: inset 0px 5px 15px rgba(190, 186, 186, 0.4),inset 0px -5px 15px rgba(255,255,255,0.4); */
+  cursor:pointer;
+  transition:0.3s;
+}
+.theme-toggle:after{
+  content:"";
+  width:20px;
+  height:20px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background: linear-gradient(180deg, #ffffff,#ffffff);
+  border-radius: 180px;
+  /* box-shadow: 0px 5px 1-px rgba(245, 242, 242, 0); */
+  transition:0.3s; 
+}
+
+.theme-toggle-inp:checked+ .theme-toggle{
+background-color: #969494;
+} 
+
+.theme-toggle-inp:checked + .theme-toggle:after{
+  left:30px;
+  background: #ffffff;;
+  }
+  .hero-section{
+    margin-top: 30px;
+  }
+  .hero{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    
+  }
+
+  .hero-section-figure{
+    margin:100px 50px 20px 50px;
+  }
+  .hero-img{
+    max-width: 500px;
+    max-height:300px;
+    margin-top:80px;
+    margin-left:100px;
+    border-radius: 10%;
+
+  }
+  .about-me{
+    margin-top: 180px;
+  }
+
+  .about-me-para{
+    max-width:700px;
+    margin-right:100px;
+    
+  }
+
+ 
+
+
+  h3, h5{
+    color: rgb(125, 98, 160);
+    }
+   h3:hover {
+      text-decoration: 1px underline rgb(48, 2, 109);
+    }
+  
+    #skills-section {
+      margin:100px 0px 200px 0px;
+      /* max-width:100%; */
+    }
+    .skill{
+      display:flex;
+      justify-content: space-around;
+      /* min-width:700px; */
+     
+    }
+    .skill-div{
+      padding:5px;
+      max-width:600px;
+      
+    }
+     
+    .skills-fig{
+      margin-top:50px;
+      max-width:300px;
+    }
+    
+    .tools-fig {
+      background-color: rgb(28, 28, 29);
+      border-radius: 30px;
+      width: 400px;
+    }
+    
+    
+    .skills-tools {
+      min-width: 200px;
+      min-height: 30px;
+      border-radius: 50px;
+      color: var(--base-color-brand--text_heading);
+      background-color: rgba(25, 17, 51, .5);
+      border: 1px solid rgba(248, 246, 254, .2);
+      position: relative;
+    
+    }
+    
+    .skills-tools:before {
+      content: "Skills";
+      z-index: 1;
+      position: absolute;
+      top: 3px;
+      left: 30px;
+    }
+    
+    .skills-tools:after {
+      content: "";
+      width: 100px;
+      height: 30px;
+      color: var(--base-color-brand--text_heading);
+      background-color: rgba(25, 17, 51, .5);
+      border: 1px solid rgba(248, 246, 254, .2);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-radius: 180px;
+      transition: 0.3s;
+    
+    }
+    
+    .skills-tools-toggle {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+    
+    
+    .skills-tools-toggle:checked+.skills-tools:after {
+      left: 90px;
+      transform: translateX(10%);
+      content: "Tools";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+    
+    }
+
+    .active {
+      display: inline;
+    }
+    
+    .hidden {
+      display: none;
+    }
+
+
+    #projects {
+      margin:100px;
+    }
+    
+    .card {
+      margin:20px;
+      max-width: 800px;
+      max-height: 600px;
+      background-color: transparent;
+      border: none;
+    }
+    
+    .card-text{
+      color: rgb(211, 202, 202);
+    }
+    
+    .card-img-top {
+      padding:5px;
+      min-height: 300px;
+      min-width:300px;
+    }
+    
+    #contact {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      
+    }
+    
+    .contact-me-content{
+      display:flex;
+      justify-content: space-around; 
+      align-items: center;
+      align-content: center;
+      /* background: #000; */
+      gap:300px;
+      
+    }
+   
+
+    .contact-me,
+    .contact-list li {
+      list-style: none;
+    }
+    
+    .contact-form{
+      background: #000;
+      min-width:500px;
+      /* margin-top:100px; */
+    }
+ 
+    
+    #footer {
+      background-color: rgba(25, 15, 48, 0.5);
+      min-height: 50px;
+      width: 100%;
+      bottom: 0;
+      position: relative;
+    
+    }
+    #footer>p {
+      font-size: 12px;
+      color: rgb(211, 202, 202);
+      text-align: center;
+     
+    }
+    
+    
+ 
+@media(max-width: 991px){
+  
+  .navbar-nav{
+    gap:30px;
+    background-color: rgba(25, 15, 48, 0.8);
+  }
+  .navbar-nav>.nav-item>.nav-link {
+    font-size: 30px;
+  }
+   
+  .hero{
+    flex-direction: column;
+    max-width: 980px;
+    
+  }
+
+  .hero-section-figure{
+    margin:0px;
+  }
+  .hero-img{
+    margin-left:0px;
+  }
+
+  .about-me-para{
+    max-width:850px;
+    margin-right:0px;
+  }
+
+
+}
