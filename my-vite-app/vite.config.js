@@ -1,12 +1,19 @@
 import { defineConfig } from 'vite';
 
-export default defineConfig({
-  // Enable ESM support
-  esbuild: {
-    format: 'esm',
-    
-  },
-  proxy:'http://localhost:3000',
-  
- 
-});
+  export default defineConfig({
+    esbuild: {
+      format: 'esm',
+    },
+    build: {
+      index: 'index.html', 
+    },
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://localhost:5000', 
+          changeOrigin: true,
+          pathRewrite: { '^/api': '' },
+        },
+      },
+    }
+  });

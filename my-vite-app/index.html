@@ -221,12 +221,13 @@
 
 
       <!-- Contact section -->
-      <section id="contact">
-        <h3 class="contact-me">Contact me</h3>
+      <section id="contact" class="container-fluid">
         <!-- Contact list -->
+        <div class="contact-div container-fluid">
         <div class="contact-me-content">
           <ul class="contact-list">
             <div>
+              <h3 class="contact-me">Contact me</h3>
               <li>
                 <i class="bi bi-geo-alt-fill"></i>
                 Address:
@@ -250,52 +251,53 @@
               <p>LLLLLLLL@gmail.com</p>
             </div>
           </ul>
-          <div>
-            <div>
-              <form class="contact-form" method="POST" action="/sendmail">
+        </div>
+        <div class="container">
+              <form class="contact-form " method="POST" action="/mail">
 
                 <div class="row mb-3 d-flex flex-column">
                   <label for="name" class="col-sm col-form-label">Name</label>
-                  <div class="col-sm-10">
-                    <input name="name" value="name" type="text" class="form-control" id="name">
+                  <div class=" col-md-12">
+                    <input name="name" placeholder="name" type="text" class="form-control" id="name">
                   </div>
                 </div>
 
                 <div class="row mb-3 d-flex flex-column">
                   <label for="email" class="col-sm col-form-label">Email</label>
-                  <div class="col-sm-10">
-                    <input name="email" value="email" type="email" class="form-control" id="email">
+                  <div class="col-md-12">
+                    <input name="email" placeholder="email"  type="email" class="form-control" id="email">
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <label for="message" class=" col-sm colform-label">Message</label>
-                  <div class="col-sm-10">
+                  <label for="message" class="col-sm col-form-label">Message</label>
+                  <div class="col-md-12 ">
                     <textarea class="form-control" id="message" value="message" rows="3" name="message"></textarea>
                   </div>
+                  <div class="d-flex justify-content-center mt-5">
+                    <button type="submit" value="send" class="btn btn-primary sendmail">Send Mail</button>
+                  </div>
                 </div>
-
-
-                <button type="submit" value="send" class="btn btn-primary sendmail">Send Mail</button>
+               
               </form>
-
             </div>
+            </div> 
           </div>
-
       </section>
       <!-- End of contact section -->
 
       <!-- footer -->
       <footer id="footer">
-        <p>&copy; L. All Rights Reserved.</p>
+        <p>&copy; L. All Rights Reserved.2024.</p>
       </footer>
       <!-- End of footer -->
-    </div>
+   
 
     
   </main>
   <!-- End of main -->
 
+  
   <!--Bootstrap JS-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -306,8 +308,8 @@
     crossorigin="anonymous"></script>
 
   <!-- Custom JS -->
-  <script type="module" src="src/script.js"></script>
-  <script type="module" src="/app.js"></script>
+  <script type="module" src="/src/script.js"></script>
+  <script type="module" src="/src/app.js"></script>
 
 
 </body>
