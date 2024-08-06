@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.resolve(__dirname, '../my-vite-app')));
 app.use(cors({
   // origin: 'http://localhost:5173',
-  origin: 'https://gsap-3.onrender.com',
+  origin: 'https://gsap-backend.onrender.com',
   credentials: true,
   method:"GET, POST,PUT,DELETE,PATCH",
 }));
