@@ -11,7 +11,7 @@ import { defineConfig } from 'vite';
       proxy: {
         '/api': {
           // target: 'http://localhost:5000', 
-          target: 'https://gsap-backend.onrender.com',
+          target: 'https://portfolio-b-zyyr.onrender.com',
           changeOrigin: true,
           pathRewrite: { '^/api': '' },
         },
