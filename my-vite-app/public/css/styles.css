@@ -297,6 +297,7 @@ background-color: #969494;
       align-content: center;
       gap:300px;
       margin-bottom: 50px;
+      /* max-width:100%; */
       
     }
    
