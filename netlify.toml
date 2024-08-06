@@ -1,2 +1,0 @@
-[functions]
-  backend = { included_files = ["server.js"] }
