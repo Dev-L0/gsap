@@ -10,7 +10,8 @@ import { defineConfig } from 'vite';
     server: {
       proxy: {
         '/api': {
-          target: 'http://localhost:5000', 
+          // target: 'http://localhost:5000', 
+          target: 'https://gsap-3.onrender.com',
           changeOrigin: true,
           pathRewrite: { '^/api': '' },
         },
